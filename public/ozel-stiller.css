@@ -1,0 +1,463 @@
+/* ============ DIO OZEL STILLER ============ */
+
+/* ---- TELEFON TASMA KILIDI ---- */
+html,body{overflow-x:hidden!important;max-width:100%}
+img{max-width:100%}
+
+/* ---- ALT BILGI SONRASI BOSLUK FIX ---- */
+body>:last-child{margin-bottom:0!important;padding-bottom:0!important}
+.footer{margin-bottom:0!important}
+
+/* ---- BAYI OL FORMU (Uiverse KapeParaguay uyarlamasi) ---- */
+#dealer-form{
+  display:flex;flex-direction:column;gap:14px;
+  background:linear-gradient(45deg,#87CEEB,#00008B);
+  padding:30px;border-radius:20px;
+  transition:background .3s ease;
+}
+#dealer-form:hover{background:linear-gradient(45deg,#00008B,#87CEEB)}
+#dealer-form label>span,#dealer-form label{color:#fff;font-weight:600}
+#dealer-form label{display:flex;flex-direction:column;gap:6px}
+#dealer-form input:not([type=checkbox]),
+#dealer-form select,
+#dealer-form textarea{
+  border:1.5px solid #ecedec;border-radius:10em;min-height:50px;
+  padding:10px 18px;background-color:#fff;color:#142131;
+  font-size:15px;font-family:inherit;width:100%;
+  transition:.2s ease-in-out;
+}
+#dealer-form select{appearance:auto}
+#dealer-form textarea{border-radius:20px;min-height:96px;resize:vertical}
+#dealer-form input:focus,#dealer-form select:focus,#dealer-form textarea:focus{outline:none}
+#dealer-form input:focus,#dealer-form select:focus,#dealer-form textarea:focus{border-color:orange}
+#dealer-form input[type=checkbox]{min-height:0;width:17px;height:17px;accent-color:orange}
+#dealer-form button[type=submit]{
+  position:relative;display:inline-block;padding:15px 30px;text-align:center;
+  letter-spacing:1px;text-decoration:none;background:transparent;
+  transition:ease-out .5s;border:2px solid #fff;border-radius:10em;
+  box-shadow:inset 0 0 0 0 green;margin-top:18px;color:#fff;
+  font-size:15px;font-weight:500;height:50px;width:100%;cursor:pointer;
+}
+#dealer-form button[type=submit]:hover{color:#fff;box-shadow:inset 0 -100px 0 0 seagreen}
+#dealer-form button[type=submit]:active{transform:scale(.9)}
+
+/* ---- BAYI HERO: gri geometrik desen + beyaz/mavi metin ---- */
+.dealer-hero{
+  --s:200px;--c1:#1d1d1d;--c2:#4e4f51;--c3:#3c3c3c;
+  background:
+    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg)
+      calc(.5*var(--s)) calc(.5*var(--s)*.577),
+    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+  background-size:var(--s) calc(var(--s)*.577);
+}
+.dealer-hero h1,.dealer-hero h2,.dealer-hero h3,.dealer-hero strong{color:#4ade80!important}
+.dealer-hero p,.dealer-hero span,.dealer-hero small,.dealer-hero li,.dealer-hero a{color:#fff!important}
+
+/* ---- URUN DETAY: karanlik ev sahnesi (Uiverse Cobp uyarlamasi) ---- */
+.plan-sahne{
+  --color-1:#111;--color-2:#222;--color-3:#333;--color-4:#2e2e2e;
+  position:relative;overflow:hidden;width:100%;height:100%;
+  background-color:var(--color-1);
+  background-image:
+    linear-gradient(to right,transparent 6%,#555 6%,#444 9%,transparent 9%),
+    linear-gradient(to right,transparent 27%,#555 27%,#444 34%,transparent 34%),
+    linear-gradient(to right,transparent 51%,#666 51%,#444 57%,transparent 57%),
+    linear-gradient(to right,transparent 42%,#0af 42%,#04a 44%,transparent 44%),
+    linear-gradient(to right,transparent 45%,#0cf 45%,#06a 47%,transparent 47%),
+    linear-gradient(to right,transparent 48%,#0ff 48%,#09a 50%,transparent 50%),
+    linear-gradient(to right,transparent 87%,#789 87%,#4f5d6a 91%,transparent 91%),
+    linear-gradient(to right,transparent 14%,#db7 14%,#971 20%,transparent 20%),
+    linear-gradient(to right,transparent 10%,#dd5 10%,#aa2 13%,transparent 13%),
+    linear-gradient(to right,transparent 21%,#a52 21%,#521 25%,transparent 25%),
+    linear-gradient(to right,transparent 58%,#a63 58%,#520 64%,transparent 64%),
+    linear-gradient(to right,transparent 92%,#244 92%,#122 95%,transparent 95%),
+    linear-gradient(to right,transparent 35%,#c55 35%,#a33 41%,transparent 41%),
+    linear-gradient(to right,transparent 78%,#c99 78%,#c99 83%,transparent 83%),
+    linear-gradient(to right,transparent 66%,#a22 66%,#702 85%,transparent 85%);
+  background-size:300px 150px;background-position:center bottom;
+}
+.plan-sahne::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-color:inherit;background-size:300px 150px;background-position:center bottom;
+  background-image:inherit;filter:saturate(1.4) brightness(1.15);
+  clip-path:circle(170px at center center);
+  animation:fenerTuru 20s ease infinite;
+}
+@keyframes fenerTuru{
+  0%{clip-path:circle(170px at -25% 10%)}
+  38%{clip-path:circle(170px at 60% 20%)}
+  40%{opacity:.2}
+  42%{opacity:1}
+  54%{opacity:.2}
+  56%{opacity:1}
+  64%{clip-path:circle(170px at 45% 78%)}
+  68%{clip-path:circle(170px at 85% 89%)}
+  72%{clip-path:circle(170px at 60% 86%)}
+  100%{clip-path:circle(170px at 150% 50%)}
+}
+.plan-sahne>*{position:relative;z-index:2}
+.plan-sahne h1,.plan-sahne h2,.plan-sahne h3,.plan-sahne strong{color:#fff!important}
+.plan-sahne p,.plan-sahne li,.plan-sahne small,.plan-sahne span,.plan-sahne td,.plan-sahne th{color:#dfe7ee!important}
+.plan-sahne a{color:#4ade80!important}
+.plan-sahne img{border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.55)}
+
+/* ---- ARAMA CUBUGU - MAVI (projeler) ---- */
+.arama-sarma{display:flex;justify-content:center;margin:1.2rem auto;max-width:420px}
+.search-box-mavi{position:relative;border-radius:50px;padding:5px;display:flex;align-items:center;
+  background:linear-gradient(135deg,rgb(220,245,228) 0%,rgb(216,243,224) 100%);
+  box-shadow:rgba(76,175,80,.7) 3px 3px 5px 0,rgba(76,175,80,.7) 5px 5px 20px 0;
+  outline:3px solid rgb(170,230,190);width:100%}
+.search-box-mavi input{padding:10px 14px;width:100%;border:none;border-radius:50px;
+  background:linear-gradient(135deg,rgb(220,245,228) 0%,rgb(216,243,224) 100%);
+  color:#2b527f;font-size:17px;font-weight:600}
+.search-box-mavi input:focus{outline:none;background:linear-gradient(135deg,rgb(240,250,242) 0%,rgb(216,243,224) 100%)}
+.search-box-mavi .arama-ikon{width:46px;min-width:46px;aspect-ratio:1;display:grid;place-items:center;
+  border-left:2px solid #fff;border-radius:50%;margin-left:4px}
+.search-box-mavi .arama-ikon svg path{fill:#fff}
+
+/* ---- ARAMA CUBUK - YESIL (urunler, renk degisik versiyon) ---- */
+.search-box-yesil{position:relative;border-radius:50px;padding:5px;display:flex;align-items:center;
+  background:linear-gradient(135deg,#d9f7e8 0%,#cdeedd 100%);
+  box-shadow:rgba(46,204,113,.65) 3px 3px 5px 0,rgba(46,204,113,.65) 5px 5px 20px 0;
+  outline:3px solid #a8e6c8;width:100%}
+.search-box-yesil input{padding:10px 14px;width:100%;border:none;border-radius:50px;
+  background:linear-gradient(135deg,#d9f7e8 0%,#cdeedd 100%);
+  color:#14532d;font-size:17px;font-weight:600}
+.search-box-yesil input:focus{outline:none;background:linear-gradient(135deg,#f2fdf7 0%,#cdeedd 100%)}
+.search-box-yesil .arama-ikon{width:46px;min-width:46px;aspect-ratio:1;display:grid;place-items:center;
+  border-left:2px solid #fff;border-radius:50%;margin-left:4px}
+.search-box-yesil .arama-ikon svg path{fill:#fff}
+
+/* ---- HAKKIMIZDA 3D DONEN GALERI (Uiverse ilkhoeri uyarlamasi) ---- */
+.luks-galeri{padding:4rem 0;text-align:center;overflow:hidden}
+.luks-galeri h2{color:#142131;margin-bottom:2rem}
+.luks-galeri .wrapper{
+  width:100%;position:relative;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;padding:2.5rem 0 3.5rem;
+}
+.luks-galeri .inner{
+  --w:130px;--h:180px;--perspective:1200px;--rotateX:-14deg;
+  position:relative;width:var(--w);height:var(--h);top:0;left:0;
+  transform-style:preserve-3d;
+  transform:perspective(var(--perspective));
+  animation:dondur 22s linear infinite;
+}
+@keyframes dondur{
+  from{transform:perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0)}
+  to{transform:perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(1turn)}
+}
+.luks-galeri .card{
+  position:absolute;inset:0;border-radius:14px;overflow:hidden;
+  border:2px solid rgba(34,197,94,.65);
+  box-shadow:0 10px 26px rgba(0,0,0,.35);
+  transform:rotateY(calc((360deg/var(--quantity))*var(--index))) translateZ(240px);
+  background:#22c55e;
+}
+.luks-galeri .card img{width:100%;height:100%;object-fit:cover;display:block}
+.mobil .luks-galeri .inner{--w:88px;--h:126px}
+.mobil .luks-galeri .card{transform:rotateY(calc((360deg/var(--quantity))*var(--index))) translateZ(165px)}
+
+/* ---- MOBIL EK GUVENLIK ---- */
+.mobil .desktop-nav{flex-wrap:wrap}
+
+/* ---- PC HERO/HEADER GARANTI KILIDI ---- */
+.corporate-hero .hero-media{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+.site-header,.corporate-hero{width:100%!important;max-width:none!important}
+html:not(.mobil) .nav{justify-content:space-between!important;flex-wrap:nowrap!important;height:60px!important;padding:0 4%!important}
+
+/* ---- PROJELER ARAMA BOSLUK FIX ---- */
+.projects-gallery-hero{padding-bottom:1.2rem!important}
+.project-gallery-section{padding-top:1.8rem!important}
+.arama-sarma{margin:.6rem auto 1rem}
+
+/* ---- PC PENCERE DARALTMA KILIDI (duzen kaymaz) ---- */
+html:not(.mobil) body{min-width:1180px!important}
+html:not(.mobil) .corporate-hero .hero-copy{margin-left:max(1.5rem,calc(50vw - 600px))!important}
+
+/* ---- HEADER EN SOLDAN EN SAGA ---- */
+.site-header .container{max-width:none!important;width:100%!important}
+html:not(.mobil) .site-header .nav{padding-left:3%!important;padding-right:3%!important}
+html:not(.mobil) .site-header .topbar{padding-left:4%!important;padding-right:4%!important}
+
+/* ---- PROJE SURECI GENISLET ---- */
+.project-journey .container{max-width:none!important;width:92%!important}
+
+/* ---- FOOTER YAZILARI KALIN + GENISLET ---- */
+.footer p,.footer a,.footer span,.footer small{font-weight:600!important}
+.footer strong{font-weight:800!important}
+.footer .container{width:94%!important;max-width:none!important}
+.footer-grid{column-gap:4rem!important}
+
+/* ---- SITE GENELI YAZILAR BIRAZ KALIN (hero haric) ---- */
+body{font-weight:500!important}
+.corporate-hero p,.corporate-hero span:not(.eyebrow),.corporate-hero small,.corporate-hero em,.corporate-hero div{font-weight:400!important}
+.corporate-hero h1,.corporate-hero h2,.corporate-hero .btn,.corporate-hero strong,.corporate-hero b{font-weight:800!important}
+
+/* ---- PC HERO YAZILARI SOLA HIZALA + GENISLET ---- */
+html:not(.mobil) .corporate-hero .hero-copy{margin-left:4%!important;width:min(740px,90%)!important;padding-left:0!important}
+html:not(.mobil) .corporate-hero .hero-copy p{max-width:640px!important}
+
+/* ---- TRUST BAR YENI PALET ---- */
+.trust-bar{background:#166534!important;border-top:1px solid #ffffff45!important;border-bottom:1px solid #ffffff45!important}
+.trust-bar:before{background:linear-gradient(90deg,#0b3d20,#0000)!important}
+.trust-bar:after{background:linear-gradient(-90deg,#0b3d20,#0000)!important}
+.trust-bar span{background:#ffffff14!important;border:1px solid #ffffff4588!important;color:#fff!important;box-shadow:inset 0 1px #ffffff30,0 8px 24px #0004!important;font-size:.82rem!important}
+.trust-bar span i{color:#4ade80!important;font-style:normal}
+
+/* ---- HEADER MENU GENISLET ---- */
+html:not(.mobil) .desktop-nav{gap:2.5rem!important}
+html:not(.mobil) .desktop-nav a{font-size:.95rem!important;padding-left:.4rem!important;padding-right:.4rem!important}
+html:not(.mobil) .nav-actions{gap:.9rem!important}
+html:not(.mobil) .nav-actions>.btn{display:inline-flex!important;padding:.85rem 1.35rem!important;font-size:.95rem!important}
+
+/* ---- AKAN KAMPANYA SERIDI ---- */
+.kampanya-sarmal{overflow:hidden;background:linear-gradient(90deg,#15803d,#22c55e 45%,#22c55e);padding:.85rem 0;position:relative}
+.kampanya-track{display:flex;width:max-content;gap:2.8rem;animation:kampMarquee 28s linear infinite}
+.kampanya-track span{color:#fff;font-weight:700;font-size:.95rem;letter-spacing:.03em;white-space:nowrap;display:flex;align-items:center;text-shadow:0 1px 6px rgba(0,0,0,.25)}
+@keyframes kampMarquee{to{transform:translateX(-50%)}}
+.kampanya-sarmal:hover .kampanya-track{animation-play-state:paused}
+
+/* ---- PROJE ARSIVI BOSLUK FIX ---- */
+.projects-gallery-hero{padding-bottom:.6rem!important}
+.project-gallery-section{padding-top:1.4rem!important;padding-bottom:3rem!important}
+.catalog-stage{padding-top:1.6rem!important}
+
+/* ---- TELEFON GUNCELLEME PAKETI (sadece .mobil) ---- */
+html:not(.mobil) body{min-width:1180px!important}
+.mobil .blog-grid{grid-template-columns:1fr 1fr!important;gap:.7rem!important;width:96%!important;margin:0 auto!important}
+.mobil .blog-card-body{min-height:0!important;padding:.55rem .65rem!important}
+.mobil .blog-card-body h3{font-size:.8rem!important;line-height:1.25!important;margin:.1rem 0 .3rem!important}
+.mobil .blog-card-body p,.mobil .blog-card-body span,.mobil .blog-card-body small{font-size:.68rem!important;line-height:1.35!important}
+.mobil .blog-card-body p{display:-webkit-box!important;-webkit-line-clamp:3!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+.mobil .blog-card-image img{height:100px!important;object-fit:cover!important}
+.mobil .dealer-layout{grid-template-columns:1fr!important;gap:1rem!important}
+.mobil .dealer-layout aside{position:static!important}
+.mobil .dealer-benefits{display:grid!important;grid-template-columns:1fr 1fr!important;gap:.5rem!important;padding-left:0!important}
+.mobil .dealer-benefits li{font-size:.7rem!important}
+.mobil .dealer-layout aside h2{font-size:1.5rem!important}
+.mobil #dealer-form{width:100%!important;max-width:none!important}
+.mobil .dealer-form-section .container{width:95%!important}
+.mobil .two-col{grid-template-columns:1fr!important;gap:.9rem!important}
+.mobil .about-visual img{max-height:220px!important;object-fit:cover!important;border-radius:12px!important}
+.mobil .two-col p{font-size:.78rem!important;line-height:1.45!important;margin:.35rem 0!important}
+.mobil .two-col h2{font-size:1.4rem!important;margin:.4rem 0!important}
+.cta{background:linear-gradient(135deg,#14532d,#22c55e)!important;border-radius:16px!important;width:92%!important;margin:1.6rem auto!important}
+.cta h2,.cta h3{color:#fff!important}
+.cta p{color:#eafff2!important}
+.cta .btn{background:#fff!important;color:#14532d!important}
+.mobil .project-gallery-section{padding-bottom:0!important;margin-bottom:0!important}
+.mobil .project-journey{margin-top:0!important;padding-top:1.6rem!important}
+.mobil .quote-hero{padding:3rem 4%!important}
+.mobil .quote-body{padding:1.4rem 4%!important}
+.mobil [class*=form-grid]{grid-template-columns:1fr!important;width:100%!important}
+.mobil .package-section{padding:2rem 0!important}
+.mobil .package-section p,.mobil .package-section li{font-size:.76rem!important;line-height:1.4!important}
+.mobil .package-compare{padding-bottom:.6rem!important;margin-bottom:0!important}
+
+/* ---- RESIM ANIMASYONSUZ + NET AKTARIM ---- */
+.blog-card-image img{transition:none!important;transform:none!important}
+img{image-rendering:auto!important;filter:none!important}
+.work-card img,.card img{transition:none!important;transform:none!important}
+.scroll-scene,.scroll-item{transition:none!important;opacity:1!important;transform:none!important;clip-path:none!important}
+.scroll-progress{display:none!important}
+html:not(.mobil) body{min-width:1180px!important}
+
+/* ---- CTA OZEL TASARIM ---- */
+.cta{position:relative;overflow:hidden;border-radius:22px!important;width:92%!important;margin:2rem auto!important;padding:3.2rem 0!important;background:#2b0d0d!important}
+.cta:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(115deg,rgba(6,32,18,.93) 25%,rgba(34,197,94,.42)),url(images/baslik-projeler.jpg) center/cover!important;animation:yavasNefes 9s ease-in-out infinite alternate}
+@keyframes yavasNefes{from{filter:brightness(.95)}to{filter:brightness(1.14)}}
+.cta .container{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:2rem;width:92%!important;flex-wrap:wrap}
+.cta h2{color:#fff!important;font-weight:900!important;font-size:clamp(1.8rem,3.4vw,3rem)!important;line-height:1.08!important;text-shadow:0 4px 24px rgba(0,0,0,.45)}
+.cta .btn{background:#22c55e!important;color:#14532d!important;font-weight:900!important;border:0!important;padding:1.05rem 2.1rem!important;border-radius:999px!important;box-shadow:0 12px 32px rgba(0,0,0,.4)!important;font-size:1.02rem!important;transition:transform .25s,box-shadow .25s!important}
+.cta .btn:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(0,0,0,.5)!important}
+
+/* ---- HAKKIMIZDA METIN BLOGU ARKA PLAN RESIM ---- */
+.two-col>div:last-child{background:linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),url(images/paketler-talimat.jpg) center/cover;border-radius:16px;padding:1.3rem 1.5rem!important;box-shadow:0 10px 28px rgba(20,60,35,.12)}
+
+/* ---- SERITLER ANA SAYFA STILINE ---- */
+.kampanya-sarmal{background:#166534!important;padding:.85rem 0!important}
+.kampanya-track span{background:linear-gradient(135deg,#ffffff14,#ffffff08)!important;border:1px solid #ffffff40!important;border-radius:999px!important;padding:.75rem 1.25rem!important;font-size:.82rem!important;color:#fff!important}
+/* ---- URUNLER EMOJISIZ RENKLI OZEL ---- */
+.kampanya-renkli{background:linear-gradient(90deg,#16a34a,#22c55e 50%,#4ade80)!important}
+.kampanya-renkli .kampanya-track span{font-size:.9rem!important;font-weight:800!important;border:1px solid #ffffff55!important}
+/* ---- KAPAK CIFTLI CAPRAZ TASARIM ---- */
+.specialty-grid,.catalog-note{display:none!important}
+.kapak-cift{display:grid!important;grid-template-columns:1fr 1fr!important;gap:1.4rem;width:92%!important;margin:0 auto 2rem!important}
+.kapak-kart{position:relative;height:300px;overflow:hidden;border-radius:4px;box-shadow:0 14px 40px rgba(0,0,0,.28)}
+.kapak-kart img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05)}
+.kapak-kart.sol{clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
+.kapak-kart.sag{clip-path:polygon(0 6%,100% 0,100% 94%,0 100%)}
+.kapak-yazi{position:absolute;left:0;right:0;bottom:0;padding:.9rem 1.2rem;background:linear-gradient(to top,rgba(6,30,15,.85),transparent);color:#fff;font-weight:900;font-size:1.15rem;letter-spacing:.05em}
+.mobil .kapak-cift{grid-template-columns:1fr!important;width:96%!important}
+.mobil .kapak-kart{height:220px}
+
+/* ---- HAKKIMIZDA METIN BLOGU CAPRAZ ---- */
+.two-col>div:last-child{
+  background:linear-gradient(115deg,rgba(8,40,20,.88),rgba(21,128,61,.78)),url(images/paketler-talimat.jpg) center/cover!important;
+  clip-path:polygon(0 3%,100% 0,100% 97%,0 100%);
+  padding:2rem 1.7rem!important;border-radius:0!important;
+}
+.two-col>div:last-child p{color:#f0fff5!important;text-shadow:0 1px 8px rgba(0,0,0,.4)!important}
+.two-col>div:last-child h2{color:#fff!important}
+
+/* ---- TRUST HIZLANDIR ---- */
+.trust-track{animation-duration:19s!important}
+
+/* ---- TOPBAR KALDIR ---- */
+.topbar{display:none!important}
+
+/* ---- TEKLIF MOBIL DUZEN ---- */
+.mobil .quote-layout{grid-template-columns:1fr!important;gap:14px!important}
+.mobil .quote-summary{position:static!important;order:-1!important;padding:16px 18px!important}
+.mobil .quote-form,[class*=form-grid]{grid-template-columns:1fr!important}
+
+/* ---- BAYI MOBIL BUTONLAR ---- */
+.mobil .nav-actions{width:100%!important;justify-content:center!important;gap:.8rem!important;padding:0 4%!important}
+.mobil .nav-actions>.btn{flex:1 1 45%!important;display:inline-flex!important;justify-content:center!important;padding:.95rem .5rem!important;font-size:1rem!important;font-weight:800!important}
+
+/* ---- BAYI FORM RENKLANDIR ---- */
+#dealer-form{background:linear-gradient(140deg,#166534,#22c55e)!important;border:2px solid #ffffff40!important;box-shadow:0 18px 50px rgba(10,60,30,.35)!important}
+#dealer-form input:focus,#dealer-form select:focus,#dealer-form textarea:focus{border-color:#22c55e!important;box-shadow:0 0 0 3px rgba(34,197,94,.35)}
+.dealer-form-section{background:linear-gradient(180deg,#f2f8f4,#d9eee2)!important}
+
+/* ---- HAKKIMIZDA YENI TASARIM ---- */
+.two-col{display:block!important}
+.two-col>div:last-child{display:none!important}
+.about-visual{position:relative!important;margin:0!important;width:100%!important}
+.about-visual img{width:100%!important;height:min(480px,54vw)!important;object-fit:cover!important;border-radius:18px!important}
+.about-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,30,15,.78),transparent 58%);border-radius:18px;z-index:1}
+.about-visual::before{content:"20+ YILLIK ÜRETİM TECRÜBESİ";position:absolute;left:5%;bottom:7%;z-index:2;color:#fff;font-weight:900;font-size:clamp(1.25rem,3vw,2.3rem);letter-spacing:.04em;text-shadow:0 3px 18px rgba(0,0,0,.65)}
+
+/* ---- PAKETLER KARAR CTA ---- */
+.package-compare{background:linear-gradient(120deg,#2b0d0d,#15803d)!important;border-radius:20px!important;width:92%!important;margin:2rem auto!important;padding:2.6rem 0!important}
+.package-compare h2,.package-compare h3{color:#fff!important}
+.package-compare p,.package-compare span{color:#dcffe8!important}
+.package-compare .btn{background:#22c55e!important;color:#14532d!important;border:0!important;border-radius:999px!important;font-weight:900!important}
+
+/* ---- BLOG KART RESIM ALANI SABIT ---- */
+.blog-card-image{aspect-ratio:16/9!important;overflow:hidden!important}
+
+/* ---- PAKET CTA MOBIL HIZA ---- */
+.mobil .package-compare{width:96%!important;border-radius:14px!important}
+.mobil .package-compare .container{flex-direction:column!important;text-align:center!important;align-items:center!important}
+
+/* ---- PROJE GALERI TEMIZLIK ---- */
+.zs-watermark{display:none!important}
+.zoom-hint{display:none!important}
+.work-index{font-size:.58rem!important;padding:.12rem .4rem!important;top:.5rem!important;left:.5rem!important}
+.work-image:focus-visible{outline:none!important}
+
+/* ---- URUN SAYFALAMA ---- */
+.urun-sayfa-bar{display:flex!important;justify-content:center!important;gap:.45rem!important;margin:1.8rem auto 0!important;flex-wrap:wrap}
+.urun-sayfa-btn{min-width:42px;height:42px;border:1.5px solid #d9e5dc;background:#fff;color:#14532d;font-weight:800;font-size:.9rem;border-radius:9px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0 .7rem;transition:all .18s}
+.urun-sayfa-btn:hover{border-color:#22c55e;transform:translateY(-1px)}
+.urun-sayfa-btn.aktif{background:#22c55e;color:#fff;border-color:#22c55e;box-shadow:0 8px 20px rgba(34,197,94,.35)}
+.urun-gizli{display:none!important}
+/* ---- LOGO YAZI ---- */
+.logo-yazi-marka{display:flex!important;flex-direction:column;line-height:1!important;text-decoration:none}
+.logo-yazi-marka b{font-size:clamp(1.15rem,2vw,1.55rem)!important;font-weight:900!important;letter-spacing:.06em;color:#17191c!important;font-family:Arial,sans-serif}
+.logo-yazi-marka small{font-size:.56rem!important;letter-spacing:.34em;color:#22c55e!important;font-weight:900!important;margin-top:.28rem}
+.footer .logo-yazi-marka b,.footer-logo.logo-yazi-marka b{color:#fff!important}
+/* ---- FOOTER HIZA ---- */
+.footer-grid{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.4fr)!important;align-items:start!important}
+.footer .container.copyright{width:min(1400px,94%)!important;margin:0 auto!important}
+/* ---- HAKKIMIZDA YENI HERO-BANNER ---- */
+.two-col{display:block!important;width:92%!important;margin:0 auto!important}
+.about-visual::before{content:"ÖRNEK MARKA";position:absolute;left:4%;top:8%;bottom:auto;z-index:2;color:#fff;font-weight:900;font-size:clamp(1.6rem,4vw,3rem);letter-spacing:.08em;text-shadow:0 4px 26px rgba(0,0,0,.55)}
+.about-visual::before{content:""}
+.about-rozetler{position:absolute;left:50%;bottom:-26px;transform:translateX(-50%);z-index:3;display:flex;gap:.7rem;width:max-content}
+.about-rozet{background:#fff;border:1px solid #dfe8e2;border-radius:12px;padding:.65rem 1.15rem;display:flex;align-items:center;gap:.6rem;box-shadow:0 12px 30px rgba(15,40,25,.16);font-weight:800;font-size:.82rem;color:#14301f}
+.about-rozet b{color:#15803d;font-size:1.05rem}
+.two-col>div:last-child{display:none!important}
+
+/* ---- ABOUT ROZETLI BANNER ---- */
+.about-yeni .about-visual::before{content:"ÖRNEK MARKA";left:4%;top:7%;bottom:auto;font-size:clamp(1.5rem,3.6vw,2.8rem);letter-spacing:.08em}
+.about-baslik{text-align:center;margin:2.6rem auto .4rem!important;font-size:clamp(1.5rem,3vw,2.4rem)!important;color:#17191c!important;font-weight:900!important}
+.two-col{width:min(1200px,94%)!important;margin:0 auto!important}
+.about-rozetler{bottom:-24px!important}
+
+/* ---- MOBILE MENU PC GIZLE ---- */
+html:not(.mobil) .mobile-menu{display:none!important}
+summary::-webkit-details-marker{display:none}
+
+/* ---- BAYI SECTION KOYU ZEMIN ---- */
+.dealer-form-section{background:linear-gradient(180deg,#1a0808,#2b1010)!important}
+.dealer-form-section .eyebrow{color:#86efac!important}
+.dealer-form-section h2{color:#fff!important}
+#dealer-form input:focus,#dealer-form select:focus,#dealer-form textarea:focus{border-color:#22c55e!important;box-shadow:0 0 0 3px rgba(34,197,94,.3)!important}
+
+/* ---- BAYI FORM TELEFON 2 KOLON ---- */
+.mobil #dealer-form{display:grid!important;grid-template-columns:1fr 1fr!important;gap:.6rem .75rem!important;padding:1.05rem .95rem!important}
+.mobil #dealer-form .form-grid{display:contents!important}
+.mobil #dealer-form label{display:flex!important;flex-direction:column!important;gap:.28rem!important;margin:0!important}
+.mobil #dealer-form label:has(select),.mobil #dealer-form label:has(textarea){grid-column:1/-1!important}
+.mobil #dealer-form label:has(input[type=checkbox]){grid-column:1/-1!important}
+.mobil #dealer-form input:not([type=checkbox]),.mobil #dealer-form select{height:44px!important;font-size:.88rem!important}
+.mobil #dealer-form textarea{min-height:84px!important}
+.mobil #dealer-form button[type=submit]{grid-column:1/-1!important;height:48px!important}
+
+/* ---- PERFORMANS KILIDI: LAG KOKTEN BITER ---- */
+.slider-light,.slider-light *{animation:none!important;transform:none!important}
+[class*=orb],[class*=glow]{animation:none!important;filter:none!important}
+.zs-image-drift,.zs-seal-drift{animation:none!important}
+.hero-slide{will-change:opacity}
+.trust-track{will-change:transform}
+#stars,#stars2,#stars3{will-change:transform!important;contain:layout style}
+
+/* ---- HIKAYE BAND (about yerine) ---- */
+.hikaye-band{background:linear-gradient(115deg,rgba(30,6,6,.92),rgba(160,28,28,.72)),url(images/baslik-hakkimizda.jpg) center/cover!important;border-radius:20px!important;width:min(1200px,94%)!important;margin:2rem auto!important;padding:3rem 2.5rem!important;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;position:relative;overflow:hidden}
+.hikaye-band .eyebr{color:#86efac;letter-spacing:.28em;font-weight:800;font-size:.72rem}
+.hikaye-band h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.08;margin:.35rem 0 .5rem;text-shadow:0 4px 24px rgba(0,0,0,.45)}
+.hikaye-band p{color:#ffe3e3;margin:.2rem 0 0;line-height:1.6;max-width:520px}
+.hb-butonlar{display:flex;gap:.8rem;flex-wrap:wrap}
+.hb-btn1{background:#22c55e;color:#fff;border-radius:999px;padding:.95rem 1.8rem;font-weight:900;border:0;box-shadow:0 12px 32px rgba(34,197,94,.4)}
+.hb-btn2{background:transparent;color:#fff;border:2px solid #ffffff88;border-radius:999px;padding:.95rem 1.8rem;font-weight:800;text-decoration:none}
+
+/* ---- BUTON KOSE KARISIMI (kare + oval) ---- */
+.btn{border-radius:10px!important}
+.nav-actions>.btn,.btn.compact,.hb-btn1,.hb-btn2,.tq-devam,.tq-gonder,.cta .btn,.package-compare .btn{border-radius:999px!important}
+
+/* ---- ILETISIM BILGI KARTLARI ---- */
+.contact-list{display:grid!important;grid-template-columns:1fr 1fr!important;gap:.85rem!important;margin-top:1.1rem!important}
+.contact-item{background:#fff!important;border:1px solid #e4e8ec!important;border-left:4px solid #22c55e!important;border-radius:12px!important;padding:1rem 1.1rem!important;display:flex!important;flex-direction:column!important;gap:.3rem!important;box-shadow:0 8px 24px rgba(20,50,30,.08)!important;transition:transform .2s!important}
+.contact-item:hover{transform:translateY(-2px)}
+.contact-item small{color:#69747d!important;font-weight:800!important;font-size:.68rem!important;letter-spacing:.14em;text-transform:uppercase!important}
+.contact-item a,.contact-item strong{color:#17191c!important;font-weight:800!important;font-size:.98rem!important;text-decoration:none!important}
+
+/* ---- FOOTER LOGO NET ---- */
+.footer .logo-yazi-marka b{color:#fff!important;font-size:1.3rem!important}
+.footer .logo-yazi-marka small{color:#86efac!important}
+
+/* ---- TEKLIF MOBIL BUTON KOMPAKT (eski kucuk hal) ---- */
+.mobil .nav-actions>.btn{flex:0 1 auto!important;padding:.45rem .8rem!important;font-size:.78rem!important;font-weight:700!important}
+.mobil .nav-actions{justify-content:flex-end!important;gap:.5rem!important}
+
+/* ---- ANA SAYFA CTA CERCEVELI RESIMLI ---- */
+.corporate-cta{position:relative!important;overflow:hidden!important;border-radius:22px!important;width:min(1200px,92%)!important;margin:2.4rem auto!important;padding:3.4rem 0!important;background:#0d2b1a!important;border:2px solid rgba(34,197,94,.4)!important}
+.corporate-cta:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(115deg,rgba(8,25,15,.9),rgba(34,197,94,.32)),url(images/baslik-projeler.jpg) center/cover}
+.corporate-cta .container{position:relative!important;z-index:2;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:2rem!important;flex-wrap:wrap!important;width:90%!important}
+.corporate-cta span{color:#4ade80!important;font-weight:900!important;letter-spacing:.28em!important;font-size:.72rem!important}
+.corporate-cta h2{color:#fff!important;font-size:clamp(1.7rem,3.4vw,2.9rem)!important;line-height:1.08!important;text-shadow:0 4px 24px rgba(0,0,0,.5)!important}
+.corporate-cta p{color:#dcffe8!important;max-width:520px!important;line-height:1.6!important}
+.corporate-cta a.btn{background:#fff!important;color:#14532d!important;border-radius:999px!important;padding:.95rem 1.9rem!important;font-weight:900!important;border-color:#fff!important}
+.corporate-cta a.text-action{color:#4ade80!important;font-weight:800!important}
+
+/* ---- HAKKIMIZDA ROZET KONUM GUVENLIGI ---- */
+.mobil .about-rozetler{bottom:-18px!important;gap:.4rem!important}
+.mobil .about-rozet{padding:.5rem .8rem!important;font-size:.68rem!important}
+.mobil .about-baslik{font-size:1.35rem!important}
+
+/* ---- HERO STANDART (ana sayfa tarzi, tum sayfalar) ---- */
+.page-hero,.package-hero,.projects-gallery-hero,.dealer-hero{padding-top:5.2rem!important;padding-bottom:4.4rem!important}
+.page-hero h1,.package-hero h1,.projects-gallery-hero h1,.dealer-hero h1{color:#fff!important;font-weight:900!important;font-size:clamp(2.7rem,5vw,4.7rem)!important;letter-spacing:-.045em!important;line-height:.96!important;text-shadow:0 5px 32px rgba(0,0,0,.55)!important}
+.page-hero p,.package-hero p,.projects-gallery-hero p,.dealer-hero p{color:#eef4f1!important;text-shadow:0 2px 14px rgba(0,0,0,.5)!important;font-size:1.04rem!important}
+.page-hero span:not(.hero-mini-kartlar *),.package-hero span:not(.hero-mini-kartlar *){color:#dfeee7!important}
+
+/* ---- HERO MINI KARTLAR ---- */
+.hero-mini-kartlar{position:relative!important;z-index:6!important;display:flex!important;gap:.6rem!important;margin-top:1.8rem!important;flex-wrap:wrap!important}
+.hero-mini-kartlar span{background:rgba(12,28,20,.55)!important;border:1px solid rgba(255,255,255,.38)!important;color:#fff!important;padding:.55rem .95rem!important;border-radius:999px!important;font-size:.78rem!important;font-weight:800!important;display:inline-flex!important;align-items:center!important;gap:.42rem!important;backdrop-filter:blur(4px)!important}
+.hero-mini-kartlar i{font-style:normal;color:#fca5a5!important;font-weight:900!important}
+
+/* ---- URUN KART WHATSAPP ---- */
+.kart-wp{display:inline-flex!important;align-items:center!important;gap:.45rem!important;margin-top:.75rem!important;background:#25d366!important;color:#06230f!important;font-weight:900!important;font-size:.78rem!important;padding:.5rem .85rem!important;border-radius:999px!important;text-decoration:none!important;box-shadow:0 6px 16px rgba(37,211,102,.4)!important;transition:transform .18s!important}
+.kart-wp:hover{transform:translateY(-2px)!important}

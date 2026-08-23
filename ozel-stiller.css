@@ -1,0 +1,8 @@
+
+/* ---- PERFORMANS KILIDI: LAG KOKTEN BITER ---- */
+.slider-light,.slider-light *{animation:none!important;transform:none!important}
+[class*=orb],[class*=glow]{animation:none!important;filter:none!important}
+.zs-image-drift,.zs-seal-drift{animation:none!important}
+.hero-slide{will-change:opacity}
+.trust-track{will-change:transform}
+#stars,#stars2,#stars3{will-change:transform!important;contain:layout style}
