@@ -521,3 +521,10 @@ main>.section:has(.contact-grid){background:#fafcfa!important;padding-bottom:4re
 .package-section p,.package-section li,.package-section span:not(.package-number){color:#45514b!important}
 .package-columns{gap:2rem!important}
 .section.turnkey-section{padding-bottom:3rem!important}
+
+/* ---- PAKETLER OKUNURLUK: beyaz panel + koyu metin ---- */
+.section.package-section{background:#f7faf8!important;background-image:none!important}
+.package-section .package-title,.package-section .package-columns{background:#ffffff!important;border-radius:14px!important;padding:1.9rem 2.1rem!important;box-shadow:0 12px 34px rgba(20,50,30,.09)!important}
+.package-section,.package-section *{color:#17191c!important}
+.package-section .eyebrow,.package-section .package-number{color:#16a34a!important;font-weight:900!important}
+.package-section h2{color:#17191c!important}
