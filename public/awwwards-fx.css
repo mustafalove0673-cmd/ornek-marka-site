@@ -1,0 +1,118 @@
+/* ============================================================
+   AWWWARDS FX — Premium animasyon & mikro-etkileşim katmanı
+   Hafif · vanilla JS · performans dostu
+   ============================================================ */
+
+/* ---- SMOOTH SCROLL ---- */
+html{scroll-behavior:smooth!important}
+
+/* ---- SAYFA GİRİŞ ANİMASYONU ---- */
+body{animation:tqSayfaGir .55s ease both!important}
+@keyframes tqSayfaGir{from{opacity:0}to{opacity:1}}
+
+/* ---- SECTION REVEAL (fade + slide up) ---- */
+.fx-ready main>*,.fx-ready main>section>*,
+.fx-ready .rv{opacity:0;transform:translateY(32px);
+ transition:opacity .72s cubic-bezier(.22,.68,.32,1) var(--fx-d,0ms),
+            transform .72s cubic-bezier(.22,.68,.32,1) var(--fx-d,0ms)}
+.fx-ready .rv-on,.fx-ready main>.rv-on,.fx-ready main>section>.rv-on{opacity:1!important;transform:none!important;transition-delay:var(--fx-d,0ms)!important}
+
+/* stagger delay utility */
+.fx-ready [data-delay="100"]{--fx-d:100ms!important}
+.fx-ready [data-delay="200"]{--fx-d:200ms!important}
+.fx-ready [data-delay="300"]{--fx-d:300ms!important}
+.fx-ready [data-delay="400"]{--fx-d:400ms!important}
+
+/* ---- TYPOGRAPHY UPGRADE ---- */
+h1,h2,h3{letter-spacing:-.035em!important;font-weight:900!important}
+h1{line-height:.98!important}
+h2{line-height:1.06!important}
+p{line-height:1.72!important}
+
+/* ---- BUTON MICRO-INTERACTION ---- */
+.btn,.tq-devam,.tq-gonder,.es-btn,.sk-btn,.mg-btn,.hb-btn1,.hb-btn2,
+.hk-btn-y,.hk-btn-c,.hk-cta-buton,.harita-btn,.fbtn-wp,.fbtn-tel,
+.kart-wp,.urun-sayfa-btn{
+ position:relative!important;overflow:hidden!important;
+ transition:transform .28s cubic-bezier(.2,.7,.25,1),box-shadow .28s,background .25s,color .25s,border-color .25s!important;
+}
+/* Işık süpürme efekti */
+.btn::after,.tq-devam::after,.tq-gonder::after,.es-btn::after,.sk-btn::after,
+.mg-btn::after,.hk-btn-y::after,.hk-btn-c::after,.hk-cta-buton::after,
+.harita-btn::after,.fbtn-wp::after,.fbtn-tel::after,.kart-wp::after,
+.urun-sayfa-btn::after{
+ content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;
+ background:linear-gradient(100deg,transparent,rgba(255,255,255,.18),transparent);
+ transition:left .45s ease;z-index:1;pointer-events:none;
+}
+.btn:hover::after,.tq-devam:hover::after,.tq-gonder::hover::after,
+.es-btn:hover::after,.sk-btn:hover::after,.mg-btn::hover::after,
+.hk-btn-y:hover::after,.hk-btn-c:hover::after,.hk-cta-buton:hover::after,
+.harita-btn:hover::after,.fbtn-wp:hover::after,.fbtn-tel:hover::after,
+.kart-wp:hover::after,.urun-sayfa-btn:hover::after{left:130%!important}
+.btn:hover,.tq-devam:hover,.tq-gonder:hover,.es-btn:hover,.sk-btn:hover,
+.mg-btn:hover,.hk-btn-y:hover,.hk-btn-c:hover,.hk-cta-buton:hover,
+.harita-btn:hover,.fbtn-wp:hover,.fbtn-tel:hover,.kart-wp:hover,
+.urun-sayfa-btn:hover{transform:translateY(-3px)!important}
+
+/* ---- LINK UNDERLINE ANIMASYONU ---- */
+.desktop-nav a,.footer a{text-decoration:none!important;position:relative!important}
+.desktop-nav a::after,.footer a::after{
+ content:"";position:absolute;bottom:-2px;left:0;width:100%;height:1.5px;
+ background:var(--tyesil,#22c55e);transform:scaleX(0);transform-origin:right;
+ transition:transform .3s cubic-bezier(.2,.68,.32,1);
+}
+.desktop-nav a:hover::after,.footer a:hover::after{transform:scaleX(1);transform-origin:left}
+
+/* ---- IMAGE PARALLAX HOVER ---- */
+.mg-kart .mg-gorsel img,.sk-kart .sk-gorsel img,
+.es-gorsel img,.deg-kart img{
+ transition:transform .65s cubic-bezier(.2,.8,.25,1)!important;
+}
+.mg-kart:hover .mg-gorsel img,.sk-kart:hover .sk-gorsel img,
+.deg-kart:hover img,.biz-gorsel:hover img{transform:scale(1.07)!important}
+
+/* ---- KART HOVER GLOW ---- */
+.mg-kart,.sk-kart,.deg-kart,.contact-item,.procedure-card,.vm-card{
+ transition:transform .32s cubic-bezier(.2,.8,.25,1),box-shadow .32s,border-color .32s!important;
+}
+.mg-kart:hover,.sk-kart:hover,.deg-kart:hover,.contact-item:hover,.procedure-card:hover{
+ box-shadow:0 24px 56px rgba(34,197,94,.14),0 4px 14px rgba(0,0,0,.08)!important;
+ border-color:rgba(34,197,94,.35)!important;
+}
+
+/* ---- SCROLL PROGRESS BAR ---- */
+.tq-progress{height:4px!important;border-radius:99px!important;overflow:hidden!important;background:#e4ebe6!important}
+#progress-bar{border-radius:99px!important;transition:width .3s ease!important}
+
+/* ---- HERO SLOW SCALE ---- */
+.corporate-hero img,.hk-hero-gorsel img{
+ transition:transform 3.2s cubic-bezier(.16,.84,.28,1)!important;
+ will-change:transform!important;
+}
+.corporate-hero.geldi img,.hk-hero.geldi .hk-hero-gorsel img{transform:scale(1)!important}
+
+/* ---- TEXT STAGGER ---- */
+.fx-ready .stagger>*{opacity:0;transform:translateY(18px);
+ transition:opacity .5s cubic-bezier(.2,.7,.25,1) calc(var(--si,0)*90ms),
+            transform .5s cubic-bezier(.2,.7,.25,1) calc(var(--si,0)*90ms)}
+.fx-ready .stagger.stag-on>*{opacity:1!important;transform:none!important}
+
+/* ---- MARQUEE SMOOTH ---- */
+.trust-track,.kampanya-track{will-change:transform!important}
+
+/* ---- FOOTER CANLI BUTONLAR ---- */
+.fbtn-wp,.fbtn-tel{position:relative!important;overflow:hidden!important}
+.fbtn-wp::before,.fbtn-tel::before{
+ content:"";position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;
+ background:rgba(255,255,255,.15);transform:translate(-50%,-50%);
+ transition:width .4s,height .4s;z-index:0;
+}
+.fbtn-wp:hover::before,.fbtn-tel:hover::before{width:300px;height:300px}
+.fbtn-wp span,.fbtn-tel span{position:relative;z-index:1}
+
+/* ---- REDUCED MOTION ---- */
+@media(prefers-reduced-motion:reduce){
+ *,:before,:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+ .fx-ready main>*,.fx-ready .rv{opacity:1!important;transform:none!important}
+}
