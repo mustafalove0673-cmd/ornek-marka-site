@@ -606,3 +606,52 @@ main.us-snap{height:100vh!important;overflow-y:auto!important;scroll-snap-type:y
 .site-header .logo-yazi-marka .ly-alt{color:#86efac!important}
 /* footer ustune gelince normal */
 .footer ~ *,footer ~ *{position:static!important}
+
+/* ============================================================
+   URUNLER SAYFASI — ASIMETRIK MAGAZINE GRID
+   Editorial dergi duzeni · buyuk kareler · hover zoom+perde
+   ============================================================ */
+main.mg-main{background:#fafcfa!important;padding-top:0!important}
+.mg-hero{padding:4.2rem 0 3rem!important;background:#fff!important;border-bottom:1px solid #e4ebe6!important}
+.mg-hero-ic{width:min(1200px,93%)!important;margin:0 auto!important}
+.mg-eye{display:inline-block;font-size:.68rem!important;font-weight:900!important;letter-spacing:.26em!important;color:#16a34a!important;text-transform:uppercase!important;margin-bottom:.7rem!important}
+.mg-h1{font-size:clamp(2.2rem,5vw,3.8rem)!important;font-weight:900!important;line-height:1.02!important;letter-spacing:-.04em!important;color:#17191c!important;margin:0 0 .7rem!important}
+.mg-p{color:#5a6660!important;font-size:1.05rem!important;max-width:480px!important;line-height:1.65!important;margin:0!important}
+
+.mg-grid-wrap{width:min(1400px,96%)!important;margin:2rem auto 3rem!important}
+.mg-grid{width:min(1240px,94%)!important;margin:0 auto!important;display:grid!important;grid-template-columns:repeat(12,1fr)!important;gap:1.15rem!important;grid-auto-flow:dense!important}
+.mg-kart:nth-child(6n+1){grid-column:span 4!important;grid-row:span 2!important}
+.mg-kart:nth-child(6n+1) .mg-gorsel img{height:420px!important}
+.mg-kart:nth-child(6n+1) h3{font-size:1.35rem!important}
+
+.mg-kart{position:relative!important;border-radius:14px!important;overflow:hidden!important;background:#fff!important;border:1px solid #e4ebe6!important;display:flex!important;flex-direction:column!important;transition:transform .32s cubic-bezier(.2,.8,.25,1),box-shadow .32s!important}
+.mg-kart:hover{transform:translateY(-6px)!important;box-shadow:0 22px 56px rgba(15,40,25,.16)!important}
+.mg-gorsel{position:relative!important;height:240px!important;overflow:hidden!important;margin:0!important}
+.mg-gorsel img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;transition:transform .65s cubic-bezier(.2,.8,.25,1)!important}
+.mg-kart:hover .mg-gorsel img{transform:scale(1.08)!important}
+.mg-perde{position:absolute!important;inset:0!important;background:linear-gradient(to top,rgba(20,83,45,.82),rgba(34,197,94,.25) 60%,transparent);opacity:0;transition:opacity .35s!important;display:flex!important;align-items:flex-end!important;padding:1.2rem!important;z-index:2}
+.mg-kart:hover .mg-perde{opacity:1!important}
+.mg-perde span{color:#fff!important;font-weight:800!important;font-size:.9rem!important}
+.mg-no{position:absolute!important;top:.75rem!important;left:.75rem!important;z-index:3!important;background:#17191cE6!important;color:#fff!important;font-size:.62rem!important;font-weight:900!important;padding:.2rem .5rem!important;border-radius:999px!important;letter-spacing:.1em!important}
+.mg-etiket{position:absolute!important;top:.75rem!important;right:.75rem!important;z-index:3!important;background:#22c55eE0!important;color:#fff!important;font-size:.58rem!important;font-weight:900!important;padding:.18rem .52rem!important;border-radius:999px!important;letter-spacing:.12em!important;text-transform:uppercase!important}
+.mg-ad{font-size:clamp(.95rem,1.6vw,1.15rem)!important;font-weight:800!important;color:#17191c!important;line-height:1.28!important;margin:0 0 .55rem!important;letter-spacing:-.015em!important;padding:1.05rem 1.15rem 0!important}
+.mg-btn{display:inline-flex!important;align-items:center!important;gap:.45rem!important;color:#15803d!important;font-weight:800!important;font-size:.8rem!important;text-decoration:none!important;padding:0 1.15rem 1.1rem!important;margin-top:auto!important;transition:gap .2s!important}
+.mg-btn::after{content:"→";transition:margin-left .2s!important}
+.mg-btn:hover::after{margin-left:4px!important}
+
+@media(max-width:1024px){
+ .mg-kart:nth-child(6n+1){grid-column:span 6!important;grid-row:auto!important}
+ .mg-kart:nth-child(6n+1) .mg-gorsel img{height:300px!important}
+ .mg-kart:nth-child(6n+4){grid-column:span 6!important}
+}
+@media(max-width:700px){
+ .mg-grid{grid-template-columns:repeat(6,1fr)!important}
+ .mg-kart:nth-child(6n+1){grid-column:span 6!important}
+ .mg-kart:nth-child(6n+4){grid-column:span 6!important}
+ .mg-gorsel{height:200px!important}
+ .mg-h1{font-size:2.2rem!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .rv{opacity:1!important;transform:none!important;transition:none!important}
+ *{animation-duration:.001s!important}
+}
