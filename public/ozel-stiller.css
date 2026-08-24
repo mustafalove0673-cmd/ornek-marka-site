@@ -655,3 +655,51 @@ main.mg-main{background:#fafcfa!important;padding-top:0!important}
  .rv{opacity:1!important;transform:none!important;transition:none!important}
  *{animation-duration:.001s!important}
 }
+
+/* ============================================================
+   URUNLER SAYFASI — STICKY KATEGORI RAYI TASARIM
+   Solda sabit kategori rayi · sagda buyuk kartlar · hover zoom+perde
+   Telefonda ray ustte yatay chip'lere doner
+   ============================================================ */
+main.sk-main{background:#fafcfa!important;padding-top:0!important}
+
+/* ---- HERO ---- */
+.sk-hero{padding:4.2rem 0 3rem!important;background:#fff!important;border-bottom:1px solid #e4ebe6!important}
+.sk-hero-ic{width:min(1200px,93%)!important;margin:0 auto!important}
+.sk-eye{display:inline-block;font-size:.68rem!important;font-weight:900!important;letter-spacing:.26em!important;color:#16a34a!important;text-transform:uppercase!important;margin-bottom:.7rem!important}
+.sk-h1{font-size:clamp(2.2rem,5vw,3.8rem)!important;font-weight:900!important;line-height:1.02!important;letter-spacing:-.04em!important;color:#17191c!important;margin:0 0 .7rem!important}
+.sk-p{color:#5a6660!important;font-size:1.05rem!important;max-width:480px!important;line-height:1.65!important;margin:0!important}
+
+/* ---- STICKY RAY ---- */
+.sk-ray{position:sticky!important;top:59px!important;z-index:30!important;background:#fffE8!important;border-bottom:1px solid #e4ebe6!important;padding:.7rem 0!important;backdrop-filter:blur(10px)!important;-webkit-backdrop-filter:blur(10px)!important}
+.sk-ray-ic{display:flex!important;gap:.5rem!important;width:min(1200px,93%)!important;margin:0 auto!important;overflow-x:auto!important;padding:2px!important;scrollbar-width:none!important;-ms-overflow-style:none!important}
+.sk-ray-ic::-webkit-scrollbar{display:none!important}
+.sk-chip{display:inline-flex!important;align-items:center!important;white-space:nowrap!important;background:#f4f7f5!important;border:1.5px solid #dcebe1!important;border-radius:999px!important;padding:.52rem 1.15rem!important;font-size:.82rem!important;font-weight:700!important;color:#37413b!important;text-decoration:none!important;transition:all .22s!important;cursor:pointer!important}
+.sk-chip:hover{border-color:#22c55e!important;color:#16a34a!important}
+.sk-chip.aktif{background:#17191c!important;border-color:#17191c!important;color:#fff!important}
+
+/* ---- GRID ---- */
+.sk-grid-ic{width:min(1240px,93%)!important;margin:0 auto 3rem!important;display:grid!important;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))!important;gap:1.15rem!important;padding-top:1.6rem!important}
+.sk-kart{position:relative!important;border-radius:14px!important;overflow:hidden!important;background:#fff!important;border:1px solid #e4ebe6!important;display:flex!important;flex-direction:column!important;transition:transform .32s cubic-bezier(.2,.8,.25,1),box-shadow .32s!important}
+.sk-kart:hover{transform:translateY(-6px)!important;box-shadow:0 22px 56px rgba(15,40,25,.16)!important}
+.sk-gorsel{position:relative!important;height:230px!important;overflow:hidden!important;margin:0!important}
+.sk-gorsel img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;transition:transform .65s cubic-bezier(.2,.8,.25,1)!important}
+.sk-kart:hover .sk-gorsel img{transform:scale(1.08)!important}
+.sk-perde{position:absolute!important;inset:0!important;background:linear-gradient(to top,rgba(20,83,45,.82),rgba(34,197,94,.25) 60%,transparent);opacity:0;transition:opacity .35s!important;display:flex!important;align-items:flex-end!important;padding:1.2rem!important;z-index:2}
+.sk-kart:hover .sk-perde{opacity:1!important}
+.sk-perde span{color:#fff!important;font-weight:800!important;font-size:.9rem!important}
+.sk-no{position:absolute!important;top:.75rem!important;left:.75rem!important;z-index:3!important;background:#17191cE6!important;color:#fff!important;font-size:.62rem!important;font-weight:900!important;padding:.2rem .5rem!important;border-radius:999px!important;letter-spacing:.1em!important}
+.sk-etiket{position:absolute!important;top:.75rem!important;right:.75rem!important;z-index:3!important;background:#22c55eE0!important;color:#fff!important;font-size:.58rem!important;font-weight:900!important;padding:.18rem .52rem!important;border-radius:999px!important;letter-spacing:.12em!important;text-transform:uppercase!important}
+.sk-ad{font-size:clamp(.95rem,1.6vw,1.15rem)!important;font-weight:800!important;color:#17191c!important;line-height:1.28!important;margin:0 0 .55rem!important;letter-spacing:-.015em!important;padding:1.05rem 1.15rem 0!important}
+.sk-btn{display:inline-flex!important;align-items:center!important;gap:.45rem!important;color:#15803d!important;font-weight:800!important;font-size:.8rem!important;text-decoration:none!important;padding:0 1.15rem 1.1rem!important;margin-top:auto!important;transition:gap .2s!important}
+.sk-btn::after{content:"→";transition:margin-left .2s!important}
+.sk-btn:hover::after{margin-left:4px!important}
+
+/* ---- MOBIL ---- */
+.mobil .sk-ray{top:0!important}
+.mobil .sk-ray-ic{padding:2px 4%!important}
+.mobil .sk-grid-ic{grid-template-columns:1fr 1fr!important;gap:.7rem!important;width:96%!important}
+.mobil .sk-gorsel{height:180px!important}
+
+/* ---- SK CHIP FILTRE EK STIL ---- */
+.sk-chip{user-select:none!important;-webkit-user-select:none!important}
