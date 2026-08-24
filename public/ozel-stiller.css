@@ -381,7 +381,7 @@ html:not(.mobil) .mobile-menu{display:none!important}
 summary::-webkit-details-marker{display:none}
 
 /* ---- BAYI SECTION KOYU ZEMIN ---- */
-.dealer-form-section{background:linear-gradient(180deg,#1a0808,#2b1010)!important}
+.dealer-form-section{background:#ffffff!important}
 .dealer-form-section .eyebrow{color:#86efac!important}
 .dealer-form-section h2{color:#fff!important}
 #dealer-form input:focus,#dealer-form select:focus,#dealer-form textarea:focus{border-color:#22c55e!important;box-shadow:0 0 0 3px rgba(34,197,94,.3)!important}
@@ -468,3 +468,18 @@ summary::-webkit-details-marker{display:none}
 
 /* ---- HERO MINI KARTLAR ORTALA ---- */
 .hero-mini-kartlar{justify-content:center!important;margin-left:auto!important;margin-right:auto!important;width:100%!important;text-align:center!important}
+
+/* ---- LOGO B/SMALL KUTU TUZAGI NORTR ---- */
+.logo>b{background:none!important;width:auto!important;height:auto!important;display:block!important;padding:0!important;margin:0!important;border-radius:0!important;font-size:clamp(1.15rem,2vw,1.55rem)!important;font-weight:900!important;letter-spacing:.06em;color:#17191c!important;font-family:Arial,sans-serif}
+.footer .logo>b{color:#fff!important}
+.logo>small{background:none!important;display:block!important;font-size:.56rem!important;letter-spacing:.34em;font-weight:900;color:#22c55e!important}
+.footer .logo>small{color:#22c55e!important}
+
+/* ---- BAYI BEYAZ ZEMIN + METINLER ---- */
+.dealer-form-section aside h2,.dealer-form-section strong{color:#17191c!important}
+.dealer-form-section aside .eyebrow{color:#dc2626!important;background:none!important;padding:0!important;font-weight:900!important}
+.dealer-form-section p,.dealer-form-section li,.dealer-form-section li span{color:#3d4449!important}
+/* ---- BAYI HERO KARELER ACIK KIRMIZI-BEYAZ-SIYAH ---- */
+.dealer-hero .hero-proof div{border-left:3px solid #dc2626!important;background:rgba(255,255,255,.16)!important;border-radius:8px!important;padding:.7rem 1rem!important}
+.dealer-hero .hero-proof strong{color:#f87171!important;text-shadow:0 2px 12px rgba(0,0,0,.6)!important}
+.dealer-hero .hero-proof span{color:#fff!important}
