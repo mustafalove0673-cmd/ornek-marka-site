@@ -483,3 +483,10 @@ summary::-webkit-details-marker{display:none}
 .dealer-hero .hero-proof div{border-left:3px solid #dc2626!important;background:rgba(255,255,255,.16)!important;border-radius:8px!important;padding:.7rem 1rem!important}
 .dealer-hero .hero-proof strong{color:#f87171!important;text-shadow:0 2px 12px rgba(0,0,0,.6)!important}
 .dealer-hero .hero-proof span{color:#fff!important}
+
+/* ---- HAKKIMIZDA MOBIL KOMPAKT ---- */
+.mobil .hikaye-band{width:94%!important;margin:1rem auto!important;padding:1.4rem 1.1rem!important;border-radius:14px!important}
+.mobil .hb-butonlar{gap:.5rem!important}
+.mobil .hb-btn1,.mobil .hb-btn2{padding:.75rem 1.1rem!important;font-size:.82rem!important;width:auto!important}
+.mobil .vision-mission>.container,.mobil main .section>.container{background:rgba(255,255,255,.95)!important;padding:1.2rem 1rem!important;border-radius:12px!important}
+.mobil .cta{width:96%!important;margin:1.2rem auto!important}
