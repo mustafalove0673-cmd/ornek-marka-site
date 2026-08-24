@@ -465,3 +465,6 @@ summary::-webkit-details-marker{display:none}
 /* ---- LOGO YAZI KUTU TUZAGI FIX ---- */
 .logo .logo-yazi-marka .ly-ust{background:none!important;width:auto!important;height:auto!important;display:block!important;padding:0!important;margin:0!important;border-radius:0!important}
 .logo .logo-yazi-marka .ly-alt{background:none!important;width:auto!important;height:auto!important;display:block!important;padding:0!important;margin:0!important;border-radius:0!important}
+
+/* ---- HERO MINI KARTLAR ORTALA ---- */
+.hero-mini-kartlar{justify-content:center!important;margin-left:auto!important;margin-right:auto!important;width:100%!important;text-align:center!important}
