@@ -1,0 +1,33 @@
+/* ============================================================
+   BAYI OL FORM BOLUMU — CANLI GRADYAN ZEMIN (Uiverse jaykdoe uyarlama)
+   ============================================================ */
+.dealer-form-section{
+  position:relative!important;overflow:hidden!important;
+  background:linear-gradient(-45deg,#00eff8,#f800b4,#ebf503,#02f6c1,#00eff8,#9400f8)!important;
+  background-size:400% 400%!important;
+  animation:tqGrad 30s ease infinite!important;
+}
+.dealer-form-section>.container{
+  background:rgba(10,12,20,.85)!important;border-radius:16px!important;
+  padding:2rem!important;backdrop-filter:blur(4px);
+}
+.dealer-form-section aside h2,
+.dealer-form-section strong{color:#fff!important;text-shadow:none!important}
+.dealer-form-section aside .eyebrow{
+  color:#fff!important;background:#17191c!important;padding:.3rem .7rem!important;
+  border-radius:999px!important;display:inline-block!important;font-weight:900!important;
+}
+.dealer-form-section p,
+.dealer-form-section li,
+.dealer-form-section li span{color:#dcdcff!important}
+#dealer-form{
+  box-shadow:0 24px 70px rgba(0,0,0,.55)!important;
+  border:1px solid rgba(255,255,255,.4)!important;
+}
+@keyframes tqGrad{
+  0%{background-position:0% 50%}
+  25%{background-position:50% 100%}
+  50%{background-position:100% 50%}
+  75%{background-position:50% 0%}
+  100%{background-position:0% 50%}
+}
