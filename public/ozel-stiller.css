@@ -468,37 +468,3 @@ summary::-webkit-details-marker{display:none}
 
 /* ---- HERO MINI KARTLAR ORTALA ---- */
 .hero-mini-kartlar{justify-content:center!important;margin-left:auto!important;margin-right:auto!important;width:100%!important;text-align:center!important}
-/* ============================================================
-   HAKKIMIZDA SAYFASI OZEL TEMA (matbaa mavisi zemin, Uiverse preet_7613 uyarlamasi)
-   Kapsam: hero ve footer HARIC tum bolge
-   ============================================================ */
-body{
-  --s:150px;
-  background-color:#86a6f9!important;
-  background-image:
-    repeating-linear-gradient(90deg,rgba(255,255,255,.16) 0 3px,transparent 3px 54px),
-    repeating-linear-gradient(0deg,rgba(23,24,28,.10) 0 3px,transparent 3px 54px),
-    radial-gradient(circle at 22% 22%,rgba(199,202,209,.55) 0 85px,#0000 86px),
-    radial-gradient(circle at 72% 68%,rgba(199,202,209,.42) 0 66px,#0000 67px);
-  background-attachment:fixed!important;
-}
-main{position:relative!important;overflow:hidden!important}
-main::before{content:"";position:absolute;inset:-25%;z-index:0;pointer-events:none;
-  background-image:
-    repeating-linear-gradient(45deg,rgba(255,255,255,.09) 0 24px,transparent 24px 48px),
-    repeating-linear-gradient(-45deg,rgba(23,24,28,.07) 0 24px,transparent 24px 48px);
-}
-main>*{position:relative;z-index:1}
-.page-hero{
-  background:linear-gradient(rgba(10,18,12,.46),rgba(10,18,12,.46)),url(images/baslik-hakkimizda-yeni.webp) center/cover no-repeat!important;
-}
-main .section>.container,
-main .vision-mission>.container,
-main .cta>.container{
-  background:rgba(255,255,255,.94)!important;border-radius:14px!important;padding:1.8rem!important;
-  box-shadow:0 16px 44px rgba(15,35,80,.22)!important;
-}
-.vision-mission>.container{background:#17181ce8!important}
-.vision-mission h2,.vision-mission h3{color:#fff!important}
-.vision-mission p,.vision-mission li,.vision-mission span{color:#e6e6e6!important}
-.hikaye-band{width:min(1200px,92%)!important;margin:2rem auto!important;border-radius:18px!important}
