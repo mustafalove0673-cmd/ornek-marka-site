@@ -1,0 +1,3 @@
+﻿Site canli adresi: https://ornek-marka-site.vercel.app/index.html
+Vercel projesi: ornek-marka-site
+Deploy: GitHub push -> Vercel otomatik yayinlar.
