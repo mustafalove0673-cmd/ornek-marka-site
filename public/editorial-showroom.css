@@ -1,0 +1,98 @@
+/* ============================================================
+   ÜRÜNLER SAYFASI — EDITORIAL SHOWROOM TASARIM
+   Tam genişlik yatay bantlar · dev numara · spek şeridi
+   Scroll fade-in · hover zoom + yeşil çizgi
+   ============================================================ */
+
+/* Sayfa zemini */
+main.hk-main{background:#fafcfa!important;padding-top:0!important}
+
+/* ---- BANT ---- */
+.es-bant{
+  position:relative;
+  border-bottom:1px solid #e4ebe6;
+  padding:4.2rem 0 4rem;
+  background:#fff;
+  overflow:hidden;
+  transition:background .35s ease;
+}
+.es-bant:hover{background:#f8fcf9}
+/* Hover'da yeşil çizgi sağdan sola */
+.es-bant::before{content:"";position:absolute;top:0;left:100%;width:100%;height:3px;background:#22c55e;transition:left .5s cubic-bezier(.22,.68,.32,1);z-index:2}
+.es-bant:hover::before{left:0}
+
+/* ---- İÇERİK GRID ---- */
+.es-icerik{display:flex!important;gap:3.2rem!important;align-items:center!important;width:min(1240px,93%)!important;margin:0 auto!important}
+
+/* ---- SOL GÖRSEL ---- */
+.es-sol{flex:0 0 44%!important;position:relative;z-index:1}
+.es-gorsel{margin:0!important;border-radius:16px!important;overflow:hidden!important;box-shadow:0 18px 52px rgba(15,40,25,.16)!important;background:#eef4ef}
+.es-gorsel img{width:100%!important;height:min(380px,42vw)!important;object-fit:cover!important;display:block!important;transition:transform .7s cubic-bezier(.2,.8,.25,1)!important}
+.es-bant:hover .es-gorsel img{transform:scale(1.06)!important}
+
+/* ---- SAĞ BİLGİ ---- */
+.es-sag{flex:1!important;position:relative;z-index:2;padding-left:.6rem}
+
+/* Dev numara */
+.es-no{
+  position:absolute!important;top:-1.9rem!important;right:-.4rem!important;
+  font-size:clamp(4.2rem,7vw,6.8rem)!important;font-weight:900!important;
+  color:transparent!important;-webkit-text-stroke:1.5px rgba(34,197,94,.28)!important;
+  line-height:1!important;pointer-events:none!important;user-select:none!important;
+  transition:-webkit-text-stroke-color .35s!important;
+}
+.es-bant:hover .es-no{-webkit-text-stroke-color:rgba(34,197,94,.5)!important}
+
+/* Eyebrow */
+.es-eye{display:inline-block;font-size:.66rem!important;font-weight:900!important;letter-spacing:.26em!important;color:#16a34a!important;text-transform:uppercase!important;margin-bottom:.55rem!important}
+
+/* Başlık */
+.es-baslik{
+  font-size:clamp(1.45rem,2.6vw,2.05rem)!important;font-weight:900!important;
+  letter-spacing:-.03em!important;line-height:1.08!important;
+  color:#17191c!important;margin:.2rem 0 .95rem!important;
+  transition:color .25s!important;
+}
+.es-bant:hover .es-baslik{color:#15803d!important}
+
+/* ---- SPEK ŞERİDİ ---- */
+.es-spek{display:flex!important;flex-wrap:wrap!important;gap:.55rem .75rem!important;margin-bottom:1.35rem!important}
+.es-spek-item{
+  display:inline-flex!important;align-items:center!important;gap:.38rem!important;
+  background:#f2f8f4!important;border:1px solid #dcebe1!important;border-radius:999px!important;
+  padding:.36rem .78rem!important;font-size:.74rem!important;font-weight:700!important;color:#37413b!important;
+}
+.es-spek-item i{font-style:normal!important;font-size:.82rem!important}
+
+/* Buton */
+.es-btn{
+  display:inline-flex!important;align-items:center!important;gap:.55rem!important;
+  background:#17191c!important;color:#fff!important;border:0!important;
+  padding:.78rem 1.65rem!important;border-radius:10px!important;
+  font-weight:800!important;font-size:.88rem!important;text-decoration:none!important;
+  transition:background .22s,color .22s,transform .22s,box-shadow .22s!important;
+}
+.es-btn::after{content:"→";transition:transform .22s!important}
+.es-btn:hover{background:#22c55e!important;color:#fff!important;transform:translateY(-2px)!important;box-shadow:0 12px 30px rgba(34,197,94,.3)!important}
+.es-btn:hover::after{transform:translateX(4px)}
+
+/* ---- SCROLL FADE-IN ---- */
+.es-bant.rv{opacity:0;transform:translateY(34px)}
+.es-bant.rv.rv-on{opacity:1;transform:none;transition:opacity .65s cubic-bezier(.2,.7,.25,1),transform .65s cubic-bezier(.2,.7,.25,1)}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:1100px){
+ .es-icerik{flex-direction:column!important;gap:1.6rem!important}
+ .es-sol{flex:none!important;width:100%!important}
+ .es-gorsel img{height:280px!important}
+ .es-sag{padding-left:0!important;width:100%!important}
+ .es-no{top:-.8rem!important;right:.3rem!important;font-size:clamp(3rem,6vw,4.5rem)!important}
+}
+@media(max-width:640px){
+ .es-bant{padding:2.4rem 0 2.2rem}
+ .es-icerik{width:92%!important;gap:1.2rem!important}
+ .es-gorsel img{height:210px!important;border-radius:11px!important}
+ .es-spek{gap:.4rem .5rem!important}
+ .es-spek-item{padding:.3rem .62rem!important;font-size:.68rem!important}
+ .es-btn{padding:.7rem 1.35rem!important;font-size:.82rem!important;width:100%!important;justify-content:center!important}
+}
